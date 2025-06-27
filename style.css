@@ -1,0 +1,289 @@
+li {
+    padding: 4px 0px;
+}
+
+.pricing-container {
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin: 50px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#standard {
+    scale: 110%;
+    transition: 0.3s ease;
+}
+
+#standard:hover {
+    scale: 120%;
+    z-index: 5;
+    transition: 0.3s ease;
+}
+
+.pricing-plan {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 15px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2),
+            rgba(98, 98, 98, 0));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.089));
+    z-index: 0;
+    transition: 0.3s ease;
+}
+
+.pricing-plan:hover {
+    scale: 120%;
+    z-index: 5;
+    transition: 0.3s ease;
+}
+
+.plan-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    align-self: center;
+    margin-top: 15px;
+}
+
+.plan-price {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+    align-self: center;
+}
+
+.plan-features {
+    font-size: 15px;
+    font-weight: 500;
+    -webkit-text-fill-color: rgb(208, 208, 208);
+    list-style: none;
+    margin: 0 14px;
+    padding: 14px;
+}
+
+.plan-button {
+    font-size: 1.5rem;
+    font-weight: 600;
+    -webkit-text-fill-color: rgba(17, 255, 0, 0.797);
+    -webkit-text-stroke: 1px rgba(1, 179, 45, 0.55);
+    text-shadow: 2px 2px 2px #0000004b;
+    width: 50%;
+    height: 50px;
+    border-radius: 25px;
+    align-self: center;
+    margin: 20px;
+    background-image: linear-gradient(rgb(0, 255, 89), rgb(0, 69, 24));
+    backdrop-filter: blur(5px);
+    border: none;
+    box-shadow: 0px 3px rgb(0, 85, 30);
+    filter: brightness(100%);
+    transition: 0.1s ease;
+}
+
+.plan-button:hover {
+    filter: brightness(50%);
+    transition: 0.2s ease;
+}
+
+.plan-button:active {
+    scale: 70%;
+}
+
+/* Hint: What can you do with a media query and flexbox? */
+@media (max-width: 1100px) {
+    .pricing-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Overrides */
+@layer reset {
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    nav ul,
+    nav li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: "";
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Sono", sans-serif;
+    background-color: #232323;
+    background-image: linear-gradient(-45deg,
+            rgba(0, 10, 85, 0.3),
+            rgba(19, 19, 19, 0.4));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    z-index: -100;
+}
+
+body::before {
+    display: block;
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#45454544 1px,
+            transparent 2px) !important;
+    background-size: 20px 20px !important;
+    z-index: -99;
+}
+
+body::after {
+    display: block;
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 10px 0 0 10px;
+    background-image: radial-gradient(#45454544 1px,
+            transparent 2px) !important;
+    background-size: 20px 20px !important;
+    z-index: -99;
+}
+
+p {
+    font-family: "Inconsolata", sans-serif !important;
+    font-weight: 300;
+}
